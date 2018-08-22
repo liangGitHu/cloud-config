@@ -22,14 +22,14 @@ spring:
       max-wait-millis: 200                                  # 等待连接获取的最大超时时间  
     
 mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml       # mybatis配置文件所在路径
+  #config-location: classpath:mybatis/mybatis.cfg.xml       # mybatis配置文件所在路径
   type-aliases-package: com.example.demo.entity           # 所有Entity别名类所在包
   mapper-locations:
   - classpath:mybatis/mapper/**/*.xml                        # mapper映射文件
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7001/eureka/
+      defaultZone: http://localhost:8001/eureka/
 ---
 server:
   port: 9001 #注册中心占用7001端口
@@ -50,12 +50,12 @@ spring:
       max-wait-millis: 200                                  # 等待连接获取的最大超时时间  
     
 mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml       # mybatis配置文件所在路径
+  #config-location: classpath:mybatis/mybatis.cfg.xml       # mybatis配置文件所在路径
   type-aliases-package: com.example.demo.entity           # 所有Entity别名类所在包
   mapper-locations:
   - classpath:mybatis/mapper/**/*.xml                        # mapper映射文件
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7001/eureka/
+      defaultZone: http://localhost:8001/eureka/
 #一定要保存为UTF-8格式
