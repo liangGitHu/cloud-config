@@ -1,35 +1,35 @@
 ﻿spring:
-      profiles:
-        active:
-        - dev
-    ---
-    server:
-      port: 7001 #注册中心占用7001端口
-    spring:
-      profiles: dev    #开发环境
-      application:
-        name: cloud-config-eureka-client
-    eureka:
-      instance:
-        hostname: localhost 
-      client:
-        register-with-eureka: false
-        fetch-register: false
-        service-url:
-          defaultZone: http://localhost:7001/eureka/
-    ---
-    server:
-      port: 7001 #注册中心占用7001端口
-    spring:
-      profiles: test    #开发环境
-      application:
-        name: cloud-config-eureka-client
-    eureka:
-      instance:
-        hostname: localhost
-      client:
-        register-with-eureka: false
-        fetch-register: false
-        service-url:
-          defaultZone: http://localhost:7001/eureka/
-    #一定要保存为UTF-8格式
+  profiles:
+    active:
+    - dev
+---
+server:
+  port: 7001 #注册中心占用7001端口
+spring:
+  profiles: dev    #开发环境
+  application:
+    name: cloud-config-eureka-client
+eureka:
+  instance:
+    hostname: localhost 
+  client:
+    register-with-eureka: false
+    fetch-register: false
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+---
+server:
+  port: 7001 #注册中心占用7001端口
+spring:
+  profiles: test    #开发环境
+  application:
+    name: cloud-config-eureka-client
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-register: false
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+#一定要保存为UTF-8格式
